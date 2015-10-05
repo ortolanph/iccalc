@@ -1,5 +1,8 @@
 package org.iccalc.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class CalculatorService {
     public int adicao(int parcela1, int parcela2) {
         return (parcela1 + parcela2);

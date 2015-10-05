@@ -42,9 +42,4 @@ public class CalculatorServiceTest extends TestCase {
 
         assertEquals(expected, actual, 0d);
     }
-
-    @Test(expected = ArithmeticException.class)
-    public void testDivisaoDivisorZero() throws Exception {
-        service.divisao(1, 0);
-    }
 }
