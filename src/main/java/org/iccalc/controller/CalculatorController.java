@@ -17,7 +17,7 @@ public class CalculatorController {
     @Autowired
     private CalculatorService service;
 
-    @RequestMapping(value = "/adicao", method = RequestMethod.GET)
+    @RequestMapping(value = "/adicao/{parcela1}/{parcela2}", method = RequestMethod.GET)
     public
     @ResponseBody
     CalculatorResult adicao(@PathVariable int parcela1, @PathVariable int parcela2) {
@@ -30,7 +30,7 @@ public class CalculatorController {
         return resultado;
     }
 
-    @RequestMapping(value = "/subtracao", method = RequestMethod.GET)
+    @RequestMapping(value = "/subtracao/{parcela1}/{parcela2}", method = RequestMethod.GET)
     public
     @ResponseBody
     CalculatorResult subtracao(@PathVariable int parcela1, @PathVariable int parcela2) {
@@ -43,7 +43,7 @@ public class CalculatorController {
         return resultado;
     }
 
-    @RequestMapping(value = "/multiplicacao", method = RequestMethod.GET)
+    @RequestMapping(value = "/multiplicacao/{fator1}/{fator2}", method = RequestMethod.GET)
     public
     @ResponseBody
     CalculatorResult multiplicacao(@PathVariable long fator1, @PathVariable long fator2) {
@@ -56,10 +56,10 @@ public class CalculatorController {
         return resultado;
     }
 
-    @RequestMapping(value = "/divisao", method = RequestMethod.GET)
+    @RequestMapping(value = "/divisao/{dividendo}/{divisor}", method = RequestMethod.GET)
     public
     @ResponseBody
-    CalculatorResult divisao(@PathVariable int divisor, @PathVariable int dividendo) {
+    CalculatorResult divisao(@PathVariable int dividendo, @PathVariable int divisor) {
         CalculatorResult resultado = new CalculatorResult();
 
         try {
