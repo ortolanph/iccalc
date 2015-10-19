@@ -18,6 +18,10 @@ calculadoraApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'divisao.jsp',
 			controller: 'DivisaoController'
 		}).
+		when('/about', {
+			templateUrl: 'about.jsp',
+			controller: 'AboutController'
+		}).
 			otherwise({
 			redirectTo: '/soma'
 		});
@@ -81,4 +85,8 @@ calculadoraApp.controller('DivisaoController', ['$scope','$http', function($scop
 	            $scope.status = data.status;
 	        })
 	  	};
+}]);
+
+calculadoraApp.controller('AboutController', ['$scope', function($scope) {
+    $scope.url = "https://github.com/ortolanph/iccalc";
 }]);
