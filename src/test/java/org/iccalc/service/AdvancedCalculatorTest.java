@@ -4,6 +4,7 @@ import junit.framework.Assert;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 public class AdvancedCalculatorTest extends TestCase {
     private AdvancedCalculator advancedCalculator;
@@ -18,7 +19,8 @@ public class AdvancedCalculatorTest extends TestCase {
         advancedCalculator = null;
     }
 
-    @public void testFactorial() {
+    @Test
+    public void testFactorial() throws Exception {
         long expected = 6;
         long actual = advancedCalculator.factorial(3);
 
