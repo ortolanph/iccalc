@@ -34,5 +34,4 @@ public class AdvancedCalculatorTest extends TestCase {
         
         Assert.assertEquals(expected, actual);
     }
-    }
 }
