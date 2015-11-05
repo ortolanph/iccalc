@@ -26,4 +26,13 @@ public class AdvancedCalculatorTest extends TestCase {
 
         Assert.assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testFactorial2() throws Exception {
+        long expected = 5040;
+        long actual = advancedCalculator.factorial(7);
+        
+        Assert.assertEquals(expected, actual);
+    }
+    }
 }
