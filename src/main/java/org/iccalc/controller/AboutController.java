@@ -21,7 +21,7 @@ public class AboutController {
     @RequestMapping(value = "/system", method = RequestMethod.GET)
     public
     @ResponseBody
-    About getSystemInformation(@PathVariable int parcela1, @PathVariable int parcela2) {
+    About getSystemInformation() {
         About about = new About();
 
         about.setTitle("Continuous Integration Calculator");
