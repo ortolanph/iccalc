@@ -38,7 +38,7 @@ public class CalculatorServiceTest extends TestCase {
     
     public void testMultiplicacaoOrdemDosFatores() throws Exception {
         long multiplicacao1 = service.multiplicacao(2, 3);
-        long multiplicacao2 = service,multiplicacao(3, 2);
+        long multiplicacao2 = service.multiplicacao(3, 2);
         
         assertEquals(multiplicacao1, multiplicacao2);
     }
