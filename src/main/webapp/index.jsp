@@ -55,6 +55,7 @@ li {
 				<li><a href="#multiplicacao">Multiplicação</a></li>
 				<li><a href="#divisao">Divisão</a></li>
 				<li><a href="#factorial">Fatorial</a></li>
+				<li><a href="#fibonacci">Fibonacci</a></li>
 				<li><a href="#about">Sobre</a></li>
 			</ul>
 			<div class="excerpt" ng-view></div>

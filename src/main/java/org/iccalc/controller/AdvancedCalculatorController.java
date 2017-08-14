@@ -31,4 +31,17 @@ public class AdvancedCalculatorController {
         return resultado;
     }
 
+    @RequestMapping(value = "/fibonacci/{numero}", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    CalculatorResult fibonacci(@PathVariable int numero) {
+        CalculatorResult resultado = new CalculatorResult();
+
+        resultado.setResultado(new Double(service.fibonacci(numero)));
+        resultado.setMensagem("Fibonacci realizado com sucesso");
+        resultado.setStatus(ResultStatus.SUCCESS);
+
+        return resultado;
+    }
+
 }

@@ -34,4 +34,36 @@ public class AdvancedCalculatorTest extends TestCase {
         
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testFibonacci0() throws Exception {
+        long expected = 0;
+        long actual = advancedCalculator.fibonacci(0);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFibonacci1() throws Exception {
+        long expected = 1;
+        long actual = advancedCalculator.fibonacci(1);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFibonacci2() throws Exception {
+        long expected = 1;
+        long actual = advancedCalculator.fibonacci(2);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFibonacci10() throws Exception {
+        long expected = 55;
+        long actual = advancedCalculator.fibonacci(10);
+
+        Assert.assertEquals(expected, actual);
+    }
 }

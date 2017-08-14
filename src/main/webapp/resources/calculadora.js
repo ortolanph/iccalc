@@ -22,6 +22,10 @@ calculadoraApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'factorial.jsp',
         	controller: 'FactorialController'
 		}).
+		when('/fibonacci', {
+			templateUrl: 'fibonacci.jsp',
+        	controller: 'FibonacciController'
+		}).
 		when('/about', {
 			templateUrl: 'about.jsp',
 			controller: 'AboutController'
@@ -97,6 +101,20 @@ calculadoraApp.controller('FactorialController', ['$scope','$http', function($sc
 
 	$scope.factorial = function() {
 	    $http.get("/advancedcalc/factorial/" + $scope.numero)
+	        .success(function(data, status) {
+	            $scope.resultado = data.resultado;
+	            $scope.mensagem = data.mensagem;
+	            $scope.status = data.status;
+	        })
+	  	};
+}]);
+
+calculadoraApp.controller('FibonacciController', ['$scope','$http', function($scope, $http) {
+    $scope.resultado = 1;
+    $scope.numero = 0;
+
+	$scope.fibonacci = function() {
+	    $http.get("/advancedcalc/fibonacci/" + $scope.numero)
 	        .success(function(data, status) {
 	            $scope.resultado = data.resultado;
 	            $scope.mensagem = data.mensagem;
