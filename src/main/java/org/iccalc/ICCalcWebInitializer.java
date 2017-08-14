@@ -10,7 +10,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-public class CRUDPeopleWebInitializer
+public class ICCalcWebInitializer
         implements WebApplicationInitializer  {
 
     @Override

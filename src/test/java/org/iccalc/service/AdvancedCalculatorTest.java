@@ -7,11 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class AdvancedCalculatorTest extends TestCase {
-    private AdvancedCalculator advancedCalculator;
+    private AdvancedCalculatorService advancedCalculator;
 
     @Before
     public void setUp() {
-        advancedCalculator = new AdvancedCalculator();
+        advancedCalculator = new AdvancedCalculatorService();
     }
 
     @After

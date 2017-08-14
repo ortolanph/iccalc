@@ -18,6 +18,10 @@ calculadoraApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'divisao.jsp',
 			controller: 'DivisaoController'
 		}).
+		when('/factorial', {
+			templateUrl: 'factorial.jsp',
+        	controller: 'FactorialController'
+		}).
 		when('/about', {
 			templateUrl: 'about.jsp',
 			controller: 'AboutController'
@@ -87,6 +91,27 @@ calculadoraApp.controller('DivisaoController', ['$scope','$http', function($scop
 	  	};
 }]);
 
-calculadoraApp.controller('AboutController', ['$scope', function($scope) {
-    $scope.url = "https://github.com/ortolanph/iccalc";
+calculadoraApp.controller('FactorialController', ['$scope','$http', function($scope, $http) {
+    $scope.resultado = 1;
+    $scope.numero = 1;
+
+	$scope.factorial = function() {
+	    $http.get("/advancedcalc/factorial/" + $scope.numero)
+	        .success(function(data, status) {
+	            $scope.resultado = data.resultado;
+	            $scope.mensagem = data.mensagem;
+	            $scope.status = data.status;
+	        })
+	  	};
+}]);
+
+calculadoraApp.controller('AboutController', ['$scope', '$http', function($scope, $http) {
+    $scope.about = {}
+
+    $scope.carregar = function() {
+        $http.get("/about/system")
+            .success(function(data, status) {
+                $scope.about = data;
+            })
+      	};
 }]);

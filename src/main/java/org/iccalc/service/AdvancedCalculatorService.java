@@ -1,8 +1,12 @@
 package org.iccalc.service;
 
-public class AdvancedCalculator {
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdvancedCalculatorService {
 
     public long factorial(int i) {
         return (i == 0)? 1 : i * factorial(i - 1);
     }
+
 }
