@@ -10,5 +10,5 @@ public class CalculatorService {
 
     public long multiplicacao(long fator1, long fator2) { return (fator1 * fator2);  }
 
-    public double divisao(int dividendo, int divisor) { return (dividendo / divisor); }
+    public double divisao(int dividendo, int divisor) { return ((double)dividendo / (double)divisor); }
 }
